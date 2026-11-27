@@ -4,7 +4,8 @@
   "description": "This project is part of the software testing course at the University of Tampere.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "coverage": "c8 npm test"
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Lauri-Niemela/comp.se.200/issues"
   },
-  "homepage": "https://github.com/Lauri-Niemela/comp.se.200#readme"
+  "homepage": "https://github.com/Lauri-Niemela/comp.se.200#readme",
+  "devDependencies": {
+    "c8": "^12.0.0",
+    "coveralls": "^3.1.1",
+    "jest": "^30.5.2",
+    "testdouble": "^4.0.0"
+  }
 }
